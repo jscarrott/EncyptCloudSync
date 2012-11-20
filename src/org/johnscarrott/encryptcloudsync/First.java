@@ -18,9 +18,14 @@ import java.security.spec.InvalidKeySpecException;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
+import javax.swing.JPopupMenu;
 import javax.swing.UIManager;
 
 import java.awt.FlowLayout;
+import java.awt.PopupMenu;
+import javax.swing.JLayeredPane;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
 
 public class First extends JFrame {
 
@@ -49,6 +54,7 @@ public class First extends JFrame {
 	 * @throws InvalidKeyException 
 	 */
 	public First() throws NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IOException, InvalidKeyException, InvalidAlgorithmParameterException {
+		
 		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
@@ -327,7 +333,11 @@ public static void main(String s[]) throws InvalidKeyException, NoSuchAlgorithmE
 	JFrame frame = new First();
 	frame.pack();
     frame.setVisible(true);
+    Passfield loginFrame = new Passfield();
+    
     frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
 }
 }
+
 
